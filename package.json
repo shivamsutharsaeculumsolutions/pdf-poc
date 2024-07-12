@@ -1,0 +1,23 @@
+{
+  "name": "iq-audit-pdf-poc",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node index.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "axios": "^1.6.8",
+    "fs": "^0.0.1-security",
+    "handlebars": "^4.7.8",
+    "html-pdf": "^3.0.1",
+    "html-pdf-node": "^1.0.8",
+    "path": "^0.12.7",
+    "puppeteer": "^22.6.5",
+    "sync-request": "^6.1.0"
+  }
+}
