@@ -54,7 +54,7 @@ const exportWebsiteAsPdf = async (html, outputPath) => {
     return PDF;
 }
 
-const html = fs.readFileSync(__dirname + '/pdf.html', 'utf-8');
+const html = fs.readFileSync(__dirname + '/inspection-imggrid.html', 'utf-8');
 
 exportWebsiteAsPdf(html, 'result.pdf').then(() => {
     console.log('PDF created successfully.');
