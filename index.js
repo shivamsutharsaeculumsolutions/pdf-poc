@@ -3,7 +3,7 @@ const path = require('path');
 const axios = require('axios');
 const html_to_pdf = require('html-pdf-node');
 
-const file = { content: fs.readFileSync(path.join(__dirname, '/inspection-imggrid.html')) };
+const file = { content: fs.readFileSync(path.join(__dirname, '/overview.html')) };
 
 const base64 = async (url) => {
     const res = await axios.get(url, { responseType: 'arraybuffer' });

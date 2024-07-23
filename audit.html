@@ -15,6 +15,10 @@
       width: 100%;
     }
 
+    .break-after {
+      page-break-after: always;
+    }
+
     .title-colored-td {
       border: 1pt solid #009AD7;
       background-color: rgba(50, 114, 145, 0.1);
@@ -52,18 +56,42 @@
       width: fit-content;
       border-radius: 2px;
     }
+
+    .na-label {
+      background-color: #858F99;
+      color: #fff;
+      print-color-adjust: exact;
+      -webkit-print-color-adjust: exact;
+      padding: 3px 8px;
+      margin-left: auto;
+      width: fit-content;
+      border-radius: 2px;
+    }
+
+    .un-label {
+      background-color: #EFF0F6;
+      color: #393F49;
+      print-color-adjust: exact;
+      -webkit-print-color-adjust: exact;
+      padding: 3px 8px;
+      margin-left: auto;
+      width: fit-content;
+      border-radius: 2px;
+    }
   </style>
 </head>
 
 <body>
   <table class="w-full" style="padding: 10px 15px;font-family: 'DM Sans', sans-serif;color: #393F49;">
     <tbody cellspacing="0">
+      <!-- Audit -->
       <tr>
         <td class="title-colored-td" style="padding: 10px 15px;font-size: 10pt;border-radius: 5px;">
           <div style="display: inline-block;width: 54%;font-weight: bold;">Audit</div>
           <div style="display: inline-block;width: 45%;text-align:right;">0/32 (0%)</div>
         </td>
       </tr>
+      <!-- Site/Project Details -->
       <tr>
         <table class="w-full" style="padding: 0 15px 0 30px;font-family: 'DM Sans', sans-serif;color: #393F49;">
           <tbody cellspacing="0">
@@ -93,6 +121,89 @@
           </tbody>
         </table>
       </tr>
+      <!-- Responses -->
+      <tr>
+        <table class="w-full" style="padding: 0 15px 0 30px;font-family: 'DM Sans', sans-serif;color: #393F49;">
+          <tbody cellspacing="0">
+            <tr>
+              <td class="nested-color-td" style="padding: 10px 15px;font-size: 10pt;border-radius: 5px;">
+                <div style="display: inline-block;width: 54%;font-weight: bold;">Responses</div>
+                <div style="display: inline-block;width: 45%;text-align:right;">
+                  0/5 (5%)
+                </div>
+              </td>
+            </tr>
+            <tr>
+              <td style="padding: 10px 15px;border-bottom: 1px solid rgba(0,0,0,0.125);">
+                <div style="display: inline-block;width: 54%;vertical-align: middle;font-weight: bold;font-size: 9pt;">
+                  Most current health
+                  inspection report available</div>
+                <div style="display: inline-block;width: 45%;text-align:right;vertical-align: middle;">
+                  <div class="yes-label" style="font-size: 8pt;">
+                    Yes
+                  </div>
+                </div>
+              </td>
+            </tr>
+            <tr>
+              <td style="padding: 10px 15px;border-bottom: 1px solid rgba(0,0,0,0.125);">
+                <div style="display: inline-block;width: 54%;vertical-align: middle;font-weight: bold;font-size: 9pt;">
+                  General Housekeeping (neat, tidy, dust free)</div>
+                <div style="display: inline-block;width: 45%;text-align:right;vertical-align: middle;">
+                  <div class="no-label" style="font-size: 8pt;">
+                    No
+                  </div>
+                </div>
+              </td>
+            </tr>
+            <tr>
+              <td style="padding: 10px 15px;border-bottom: 1px solid rgba(0,0,0,0.125);">
+                <div style="display: inline-block;width: 54%;vertical-align: middle;font-weight: bold;font-size: 9pt;">
+                  Walkways (free of debris and obstructions)</div>
+                <div style="display: inline-block;width: 45%;text-align:right;vertical-align: middle;">
+                  <div class="yes-label" style="font-size: 8pt;">
+                    Yes
+                  </div>
+                </div>
+              </td>
+            </tr>
+            <tr>
+              <td style="padding: 10px 15px;border-bottom: 1px solid rgba(0,0,0,0.125);">
+                <div style="display: inline-block;width: 54%;vertical-align: middle;font-weight: bold;font-size: 9pt;">
+                  Work Surfaces (clear of clutter and dust)</div>
+                <div style="display: inline-block;width: 45%;text-align:right;vertical-align: middle;">
+                  <div class="na-label" style="font-size: 8pt;">
+                    N/A
+                  </div>
+                </div>
+              </td>
+            </tr>
+            <tr>
+              <td style="padding: 10px 15px;border-bottom: 1px solid rgba(0,0,0,0.125);">
+                <div style="display: inline-block;width: 54%;vertical-align: middle;font-weight: bold;font-size: 9pt;">
+                  Sides or Holes (safety guards or covered)</div>
+                <div style="display: inline-block;width: 45%;text-align:right;vertical-align: middle;">
+                  <div class="yes-label" style="font-size: 8pt;">
+                    Yes
+                  </div>
+                </div>
+              </td>
+            </tr>
+            <tr>
+              <td style="padding: 10px 15px;">
+                <div style="display: inline-block;width: 54%;vertical-align: middle;font-weight: bold;font-size: 9pt;">
+                  Impalement Hazards (none present, or adequately marked)</div>
+                <div style="display: inline-block;width: 45%;text-align:right;vertical-align: middle;">
+                  <div class="un-label" style="font-size: 8pt;">
+                    Unanswered
+                  </div>
+                </div>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </tr>
+      <!-- Global Responses -->
       <tr>
         <table class="w-full" style="padding: 0 15px 0 30px;font-family: 'DM Sans', sans-serif;color: #393F49;">
           <tbody cellspacing="0">
@@ -114,6 +225,7 @@
           </tbody>
         </table>
       </tr>
+      <!-- Text Answer -->
       <tr>
         <table class="w-full" style="padding: 0 15px 0 30px;font-family: 'DM Sans', sans-serif;color: #393F49;">
           <tbody cellspacing="0">
@@ -137,6 +249,7 @@
           </tbody>
         </table>
       </tr>
+      <!-- Number -->
       <tr>
         <table class="w-full" style="padding: 0 15px 0 30px;font-family: 'DM Sans', sans-serif;color: #393F49;">
           <tbody cellspacing="0">
@@ -159,8 +272,10 @@
           </tbody>
         </table>
       </tr>
-      <tr>
-        <table class="w-full" style="padding: 0 15px 0 30px;font-family: 'DM Sans', sans-serif;color: #393F49;">
+      <!-- Check Box -->
+      <tr class="break-after">
+        <table class="w-full break-after"
+          style="padding: 0 15px 0 30px;font-family: 'DM Sans', sans-serif;color: #393F49;">
           <tbody cellspacing="0">
             <tr>
               <td class="nested-color-td" style="padding: 10px 15px;font-size: 10pt;border-radius: 5px;">
@@ -183,6 +298,50 @@
           </tbody>
         </table>
       </tr>
+      <!-- Media -->
+      <tr>
+        <table class="w-full" style="padding: 0 15px 0 30px;font-family: 'DM Sans', sans-serif;color: #393F49;">
+          <tbody cellspacing="0">
+            <tr>
+              <td class="nested-color-td" style="padding: 10px 15px;font-size: 10pt;border-radius: 5px;">
+                <div style="display: inline-block;width: 54%;font-weight: bold;">Media</div>
+                <div style="display: inline-block;width: 45%;text-align:right;">
+                  0/5 (5%)
+                </div>
+              </td>
+            </tr>
+            <tr>
+              <td style="padding: 10px 15px;">
+                <div style="font-weight: bold;font-size: 9pt;padding-bottom: 5px;">Internal Glass clean and free of
+                  dust, dirt and residue
+                </div>
+                <table class="w-50" style="padding: 0;font-family: 'DM Sans', sans-serif;color: #393F49;">
+                  <tbody>
+                    <tr>
+                      <td style="font-size: 8pt;padding-right: 10px;">
+                        <div style="width: 100%;padding-bottom: 10px;font-weight: 500;">Photo 1</div>
+                        <img src="https://placehold.co/100" alt="image"
+                          style="width: 100%;max-width: 100%;vertical-align: middle;border-radius: 4px;" />
+                      </td>
+                      <td style="font-size: 8pt;padding-right: 10px;">
+                        <div style="width: 100%;padding-bottom: 10px;font-weight: 500;border-radius: 4px;">Photo 2</div>
+                        <img src="https://placehold.co/100" alt="image"
+                          style="width: 100%;max-width: 100%;vertical-align: middle;" />
+                      </td>
+                      <td style="font-size: 8pt;padding-right: 10px;">
+                        <div style="width: 100%;padding-bottom: 10px;font-weight: 500;">Photo 3</div>
+                        <img src="https://placehold.co/100" alt="image"
+                          style="width: 100%;max-width: 100%;vertical-align: middle;border-radius: 4px;" />
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </tr>
+      <!-- Slider -->
       <tr>
         <table class="w-full" style="padding: 0 15px 0 30px;font-family: 'DM Sans', sans-serif;color: #393F49;">
           <tbody cellspacing="0">
@@ -204,6 +363,74 @@
           </tbody>
         </table>
       </tr>
+      <!-- Annotation -->
+      <tr>
+        <table class="w-full" style="padding: 0 15px 0 30px;font-family: 'DM Sans', sans-serif;color: #393F49;">
+          <tbody cellspacing="0">
+            <tr>
+              <td class="nested-color-td" style="padding: 10px 15px;font-size: 10pt;border-radius: 5px;">
+                <div style="display: inline-block;width: 54%;font-weight: bold;">Annotation</div>
+                <div style="display: inline-block;width: 45%;text-align:right;">
+                  0/5 (5%)
+                </div>
+              </td>
+            </tr>
+            <tr>
+              <td style="padding: 10px 15px;">
+                <div style="font-weight: bold;font-size: 9pt;padding-bottom: 5px;">Power Tools are undamaged and being
+                  used fit for purpose
+                </div>
+                <img src="https://placehold.co/200x100" alt="image"
+                  style="width: 100%;max-width: 220px;vertical-align: middle;border-radius: 4px;" />
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </tr>
+      <!-- Signature -->
+      <tr class="break-after">
+        <table class="w-full break-after"
+          style="padding: 0 15px 0 30px;font-family: 'DM Sans', sans-serif;color: #393F49;">
+          <tbody cellspacing="0">
+            <tr>
+              <td class="nested-color-td" style="padding: 10px 15px;font-size: 10pt;border-radius: 5px;">
+                <div style="display: inline-block;width: 54%;font-weight: bold;">Signature</div>
+                <div style="display: inline-block;width: 45%;text-align:right;">
+                  0/5 (5%)
+                </div>
+              </td>
+            </tr>
+            <tr>
+              <td style="padding: 10px 15px;border-bottom: 1px solid rgba(0,0,0,0.125);">
+                <div style="display: inline-block;width: 54%;font-weight: bold;font-size: 9pt; vertical-align: middle;">
+                  Name & Signature of Site Supervisor / Foreman
+                </div>
+                <div style="display: inline-block;width: 45%;text-align:right;font-size: 9pt;vertical-align: middle;">
+                  <img src="https://placehold.co/180x90" alt="image"
+                    style="width: 100%;max-width: 180px;vertical-align: middle;border-radius: 4px;margin-bottom: 10px;" />
+                  <div style="padding-bottom: 5px;">Smith Lake</div>
+                  <div style="font-size: 8pt;">2 July 2024 8:54 UTC</div>
+                </div>
+              </td>
+            </tr>
+            <tr>
+              <td style="padding: 10px 15px;">
+                <div style="display: inline-block;width: 54%;font-weight: bold;font-size: 9pt; vertical-align: middle;">
+                  Name & Signature of
+                  Inspector
+                </div>
+                <div style="display: inline-block;width: 45%;text-align:right;font-size: 9pt;vertical-align: middle;">
+                  <img src="https://placehold.co/180x90" alt="image"
+                    style="width: 100%;max-width: 180px;vertical-align: middle;border-radius: 4px;margin-bottom: 10px;" />
+                  <div style="padding-bottom: 5px;">Smith Lake</div>
+                  <div style="font-size: 8pt;">2 July 2024 8:54 UTC</div>
+                </div>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </tr>
+      <!-- Location -->
       <tr>
         <table class="w-full" style="padding: 0 15px 0 30px;font-family: 'DM Sans', sans-serif;color: #393F49;">
           <tbody cellspacing="0">
@@ -226,6 +453,7 @@
           </tbody>
         </table>
       </tr>
+      <!-- Instruction -->
       <tr>
         <table class="w-full" style="padding: 0 15px 0 30px;font-family: 'DM Sans', sans-serif;color: #393F49;">
           <tbody cellspacing="0">
