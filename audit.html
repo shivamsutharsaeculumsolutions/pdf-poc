@@ -11,8 +11,17 @@
       box-sizing: border-box;
     }
 
-    .w-full {
+    table {
+      font-family: 'DM Sans', sans-serif;
+      color: #393F49;
       width: 100%;
+      font-size: 9pt;
+    }
+
+    .w-50 {
+      min-width: 50%;
+      width: 50%;
+      max-width: 50%;
     }
 
     .break-after {
@@ -25,6 +34,9 @@
       color: #009AD7;
       print-color-adjust: exact;
       -webkit-print-color-adjust: exact;
+      border-radius: 5px;
+      padding: 10px 15px;
+      font-size: 10pt;
     }
 
     .nested-color-td {
@@ -33,6 +45,14 @@
       color: #393F49;
       print-color-adjust: exact;
       -webkit-print-color-adjust: exact;
+      border-radius: 5px;
+      padding: 10px 15px;
+      font-size: 9pt;
+    }
+
+    .normal-color-td {
+      padding: 10px 15px;
+      font-size: 9pt;
     }
 
     .yes-label {
@@ -43,7 +63,9 @@
       padding: 3px 8px;
       margin-left: auto;
       width: fit-content;
-      border-radius: 2px;
+      border-radius: 5px;
+      font-weight: bold;
+      font-size: 9pt;
     }
 
     .no-label {
@@ -54,7 +76,9 @@
       padding: 3px 8px;
       margin-left: auto;
       width: fit-content;
-      border-radius: 2px;
+      border-radius: 5px;
+      font-weight: bold;
+      font-size: 9pt;
     }
 
     .na-label {
@@ -65,7 +89,9 @@
       padding: 3px 8px;
       margin-left: auto;
       width: fit-content;
-      border-radius: 2px;
+      border-radius: 5px;
+      font-weight: bold;
+      font-size: 9pt;
     }
 
     .un-label {
@@ -76,44 +102,69 @@
       padding: 3px 8px;
       margin-left: auto;
       width: fit-content;
-      border-radius: 2px;
+      border-radius: 5px;
+      font-weight: bold;
+      font-size: 9pt;
+    }
+
+    .title {
+      font-weight: bold;
+    }
+
+    .text {
+      font-weight: normal;
+    }
+
+    .text-left {
+      text-align: left;
+    }
+
+    .text-right {
+      text-align: right;
+    }
+
+    .image {
+      width: 100%;
+      max-width: 100%;
+      vertical-align: middle;
     }
   </style>
 </head>
 
 <body>
-  <table class="w-full" style="padding: 10px 15px;font-family: 'DM Sans', sans-serif;color: #393F49;">
+  <table style="padding: 10px 15px;">
     <tbody cellspacing="0">
       <!-- Audit -->
       <tr>
-        <td class="title-colored-td" style="padding: 10px 15px;font-size: 10pt;border-radius: 5px;">
-          <div style="display: inline-block;width: 54%;font-weight: bold;">Audit</div>
-          <div style="display: inline-block;width: 45%;text-align:right;">0/32 (0%)</div>
+        <td class="title-colored-td">
+          <div class="title text-left" style="display: inline-block;width: 54%;">Audit</div>
+          <div class="text text-right" style="display: inline-block;width: 45%;">0/32 (0%)</div>
         </td>
       </tr>
       <!-- Site/Project Details -->
       <tr>
-        <table class="w-full" style="padding: 0 15px 0 30px;font-family: 'DM Sans', sans-serif;color: #393F49;">
+        <table style="padding: 0 15px 0 30px;">
           <tbody cellspacing="0">
             <tr>
-              <td class="nested-color-td" style="padding: 10px 15px;font-size: 10pt;border-radius: 5px;">
-                <div style="display: inline-block;width: 54%;font-weight: bold;">Site/Project Details</div>
-                <div style="display: inline-block;width: 45%;text-align:right;">
+              <td class="nested-color-td">
+                <div class="title text-left" style="display: inline-block;width: 54%;font-weight: bold;">Site/Project
+                  Details</div>
+                <div class="text text-right" style="display: inline-block;width: 45%;text-align:right;">
                   0/5 (5%)
                 </div>
               </td>
             </tr>
             <tr>
-              <td style="padding: 10px 15px;border-bottom: 1px solid rgba(0,0,0,0.125);">
-                <div style="font-weight: bold;font-size: 9pt;padding-bottom: 4px;">Name</div>
-                <div style="font-size: 9pt;">ABC Services
+              <td class="normal-color-td" style="border-bottom: 1px solid rgba(0,0,0,0.125);">
+                <div class="title text-left" style="padding-bottom: 4px;">Name</div>
+                <div class="text text-left">ABC Services
                 </div>
               </td>
             </tr>
             <tr>
-              <td style="padding: 10px 15px;">
-                <div style="font-weight: bold;font-size: 9pt;padding-bottom: 4px;">Description</div>
-                <div style="font-size: 9pt;">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Sit saepe,
+              <td class="normal-color-td">
+                <div class="title text-left" style="padding-bottom: 4px;">Description</div>
+                <div class="text text-left">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Sit saepe,
                   voluptate culpa fugit illum perferendis exercitationem dolorum harum. Consectetur, est.
                 </div>
               </td>
@@ -123,78 +174,78 @@
       </tr>
       <!-- Responses -->
       <tr>
-        <table class="w-full" style="padding: 0 15px 0 30px;font-family: 'DM Sans', sans-serif;color: #393F49;">
+        <table style="padding: 0 15px 0 30px;">
           <tbody cellspacing="0">
             <tr>
-              <td class="nested-color-td" style="padding: 10px 15px;font-size: 10pt;border-radius: 5px;">
-                <div style="display: inline-block;width: 54%;font-weight: bold;">Responses</div>
-                <div style="display: inline-block;width: 45%;text-align:right;">
+              <td class="nested-color-td">
+                <div class="title text-left" style="display: inline-block;width: 54%;">Responses</div>
+                <div class="text text-right" style="display: inline-block;width: 45%;">
                   0/5 (5%)
                 </div>
               </td>
             </tr>
             <tr>
-              <td style="padding: 10px 15px;border-bottom: 1px solid rgba(0,0,0,0.125);">
-                <div style="display: inline-block;width: 54%;vertical-align: middle;font-weight: bold;font-size: 9pt;">
+              <td class="normal-color-td" style="border-bottom: 1px solid rgba(0,0,0,0.125);">
+                <div class="title text-left" style="display: inline-block;width: 54%;vertical-align: middle;">
                   Most current health
                   inspection report available</div>
-                <div style="display: inline-block;width: 45%;text-align:right;vertical-align: middle;">
-                  <div class="yes-label" style="font-size: 8pt;">
+                <div class="text text-right" style="display: inline-block;width: 45%;vertical-align: middle;">
+                  <div class="yes-label">
                     Yes
                   </div>
                 </div>
               </td>
             </tr>
             <tr>
-              <td style="padding: 10px 15px;border-bottom: 1px solid rgba(0,0,0,0.125);">
-                <div style="display: inline-block;width: 54%;vertical-align: middle;font-weight: bold;font-size: 9pt;">
+              <td class="normal-color-td" style="border-bottom: 1px solid rgba(0,0,0,0.125);">
+                <div class="title text-left" style="display: inline-block;width: 54%;vertical-align: middle;">
                   General Housekeeping (neat, tidy, dust free)</div>
-                <div style="display: inline-block;width: 45%;text-align:right;vertical-align: middle;">
-                  <div class="no-label" style="font-size: 8pt;">
+                <div class="text text-right" style="display: inline-block;width: 45%;vertical-align: middle;">
+                  <div class="no-label">
                     No
                   </div>
                 </div>
               </td>
             </tr>
             <tr>
-              <td style="padding: 10px 15px;border-bottom: 1px solid rgba(0,0,0,0.125);">
-                <div style="display: inline-block;width: 54%;vertical-align: middle;font-weight: bold;font-size: 9pt;">
+              <td class="normal-color-td" style="border-bottom: 1px solid rgba(0,0,0,0.125);">
+                <div class="title text-left" style="display: inline-block;width: 54%;vertical-align: middle;">
                   Walkways (free of debris and obstructions)</div>
-                <div style="display: inline-block;width: 45%;text-align:right;vertical-align: middle;">
-                  <div class="yes-label" style="font-size: 8pt;">
+                <div class="text text-right" style="display: inline-block;width: 45%;vertical-align: middle;">
+                  <div class="yes-label">
                     Yes
                   </div>
                 </div>
               </td>
             </tr>
             <tr>
-              <td style="padding: 10px 15px;border-bottom: 1px solid rgba(0,0,0,0.125);">
-                <div style="display: inline-block;width: 54%;vertical-align: middle;font-weight: bold;font-size: 9pt;">
+              <td class="normal-color-td" style="border-bottom: 1px solid rgba(0,0,0,0.125);">
+                <div class="title text-left" style="display: inline-block;width: 54%;vertical-align: middle;">
                   Work Surfaces (clear of clutter and dust)</div>
-                <div style="display: inline-block;width: 45%;text-align:right;vertical-align: middle;">
-                  <div class="na-label" style="font-size: 8pt;">
+                <div class="text text-right" style="display: inline-block;width: 45%;vertical-align: middle;">
+                  <div class="na-label">
                     N/A
                   </div>
                 </div>
               </td>
             </tr>
             <tr>
-              <td style="padding: 10px 15px;border-bottom: 1px solid rgba(0,0,0,0.125);">
-                <div style="display: inline-block;width: 54%;vertical-align: middle;font-weight: bold;font-size: 9pt;">
+              <td class="normal-color-td" style="border-bottom: 1px solid rgba(0,0,0,0.125);">
+                <div class="title text-left" style="display: inline-block;width: 54%;vertical-align: middle;">
                   Sides or Holes (safety guards or covered)</div>
-                <div style="display: inline-block;width: 45%;text-align:right;vertical-align: middle;">
-                  <div class="yes-label" style="font-size: 8pt;">
+                <div class="text text-right" style="display: inline-block;width: 45%;vertical-align: middle;">
+                  <div class="yes-label">
                     Yes
                   </div>
                 </div>
               </td>
             </tr>
             <tr>
-              <td style="padding: 10px 15px;">
-                <div style="display: inline-block;width: 54%;vertical-align: middle;font-weight: bold;font-size: 9pt;">
+              <td class="normal-color-td">
+                <div class="title text-left" style="display: inline-block;width: 54%;vertical-align: middle;">
                   Impalement Hazards (none present, or adequately marked)</div>
-                <div style="display: inline-block;width: 45%;text-align:right;vertical-align: middle;">
-                  <div class="un-label" style="font-size: 8pt;">
+                <div class="text text-right" style="display: inline-block;width: 45%;vertical-align: middle;">
+                  <div class="un-label">
                     Unanswered
                   </div>
                 </div>
@@ -205,21 +256,21 @@
       </tr>
       <!-- Global Responses -->
       <tr>
-        <table class="w-full" style="padding: 0 15px 0 30px;font-family: 'DM Sans', sans-serif;color: #393F49;">
+        <table style="padding: 0 15px 0 30px;">
           <tbody cellspacing="0">
             <tr>
-              <td class="nested-color-td" style="padding: 10px 15px;font-size: 10pt;border-radius: 5px;">
-                <div style="display: inline-block;width: 54%;font-weight: bold;">Global Responses</div>
-                <div style="display: inline-block;width: 45%;text-align:right;">
+              <td class="nested-color-td">
+                <div class="title text-left" style="display: inline-block;width: 54%;">Global Responses</div>
+                <div class="text text-right" style="display: inline-block;width: 45%;">
                   0/5 (5%)
                 </div>
               </td>
             </tr>
             <tr>
-              <td style="padding: 10px 15px;">
-                <div style="display: inline-block;width: 54%;font-weight: bold;font-size: 9pt;">Emergency contact list
+              <td class="normal-color-td">
+                <div class="title text-left" style="display: inline-block;width: 54%;">Emergency contact list
                 </div>
-                <div style="display: inline-block;width: 45%;text-align:right;font-size: 9pt;">Janson Cooper</div>
+                <div class="text text-right" style="display: inline-block;width: 45%;">Janson Cooper</div>
               </td>
             </tr>
           </tbody>
@@ -227,21 +278,22 @@
       </tr>
       <!-- Text Answer -->
       <tr>
-        <table class="w-full" style="padding: 0 15px 0 30px;font-family: 'DM Sans', sans-serif;color: #393F49;">
+        <table style="padding: 0 15px 0 30px;">
           <tbody cellspacing="0">
             <tr>
-              <td class="nested-color-td" style="padding: 10px 15px;font-size: 10pt;border-radius: 5px;">
-                <div style="display: inline-block;width: 54%;font-weight: bold;">Text Answer</div>
-                <div style="display: inline-block;width: 45%;text-align:right;">
+              <td class="nested-color-td">
+                <div class="title text-left" style="display: inline-block;width: 54%;">Text Answer
+                </div>
+                <div class="text text-right" style="display: inline-block;width: 45%;">
                   0/5 (5%)
                 </div>
               </td>
             </tr>
             <tr>
-              <td style="padding: 10px 15px;">
-                <div style="font-weight: bold;font-size: 9pt;padding-bottom: 4px;">List other critical violations
+              <td class="normal-color-td">
+                <div class="title text-left" style="padding-bottom: 4px;">List other critical violations
                   observed that are NOT listed above</div>
-                <div style="font-size: 9pt;">Additional critical violations found in areas like machine guarding and
+                <div class="text text-left">Additional critical violations found in areas like machine guarding and
                   chemical storage. Refer to the full report for details.
                 </div>
               </td>
@@ -251,22 +303,22 @@
       </tr>
       <!-- Number -->
       <tr>
-        <table class="w-full" style="padding: 0 15px 0 30px;font-family: 'DM Sans', sans-serif;color: #393F49;">
+        <table style="padding: 0 15px 0 30px;">
           <tbody cellspacing="0">
             <tr>
-              <td class="nested-color-td" style="padding: 10px 15px;font-size: 10pt;border-radius: 5px;">
-                <div style="display: inline-block;width: 54%;font-weight: bold;">Number</div>
-                <div style="display: inline-block;width: 45%;text-align:right;">
+              <td class="nested-color-td">
+                <div class="title text-left" style="display: inline-block;width: 54%;">Number</div>
+                <div class="text text-right" style="display: inline-block;width: 45%;">
                   0/5 (5%)
                 </div>
               </td>
             </tr>
             <tr>
-              <td style="padding: 10px 15px;">
-                <div style="display: inline-block;width: 54%;font-weight: bold;font-size: 9pt;">All sinks meet hot water
+              <td class="normal-color-td">
+                <div class="title text-left" style="display: inline-block;width: 54%;">All sinks meet hot water
                   requirements and in good repair.
                 </div>
-                <div style="display: inline-block;width: 45%;text-align:right;font-size: 9pt;">10</div>
+                <div class="text text-right" style="display: inline-block;width: 45%;">10</div>
               </td>
             </tr>
           </tbody>
@@ -274,23 +326,22 @@
       </tr>
       <!-- Check Box -->
       <tr class="break-after">
-        <table class="w-full break-after"
-          style="padding: 0 15px 0 30px;font-family: 'DM Sans', sans-serif;color: #393F49;">
+        <table class="break-after" style="padding: 0 15px 0 30px;">
           <tbody cellspacing="0">
             <tr>
-              <td class="nested-color-td" style="padding: 10px 15px;font-size: 10pt;border-radius: 5px;">
-                <div style="display: inline-block;width: 54%;font-weight: bold;">Check Box</div>
-                <div style="display: inline-block;width: 45%;text-align:right;">
+              <td class="nested-color-td">
+                <div class="title text-left" style="display: inline-block;width: 54%;">Check Box</div>
+                <div class="text text-right" style="display: inline-block;width: 45%;">
                   0/5 (5%)
                 </div>
               </td>
             </tr>
             <tr>
-              <td style="padding: 10px 15px;">
-                <div style="display: inline-block;width: 54%;font-weight: bold;font-size: 9pt;">Have you answered all
+              <td class="normal-color-td">
+                <div class="title text-left" style="display: inline-block;width: 54%;">Have you answered all
                   questions in this section?
                 </div>
-                <div style="display: inline-block;width: 45%;text-align:right;font-size: 9pt;">
+                <div class="text text-right" style="display: inline-block;width: 45%;">
                   <input type="checkbox" checked />
                 </div>
               </td>
@@ -300,38 +351,35 @@
       </tr>
       <!-- Media -->
       <tr>
-        <table class="w-full" style="padding: 0 15px 0 30px;font-family: 'DM Sans', sans-serif;color: #393F49;">
+        <table style="padding: 0 15px 0 30px;">
           <tbody cellspacing="0">
             <tr>
-              <td class="nested-color-td" style="padding: 10px 15px;font-size: 10pt;border-radius: 5px;">
-                <div style="display: inline-block;width: 54%;font-weight: bold;">Media</div>
-                <div style="display: inline-block;width: 45%;text-align:right;">
+              <td class="nested-color-td">
+                <div class="title text-left" style="display: inline-block;width: 54%;">Media</div>
+                <div class="text text-right" style="display: inline-block;width: 45%;">
                   0/5 (5%)
                 </div>
               </td>
             </tr>
             <tr>
-              <td style="padding: 10px 15px;">
-                <div style="font-weight: bold;font-size: 9pt;padding-bottom: 5px;">Internal Glass clean and free of
+              <td class="normal-color-td">
+                <div class="title text-left" style="padding-bottom: 10px;">Internal Glass clean and free of
                   dust, dirt and residue
                 </div>
-                <table class="w-50" style="padding: 0;font-family: 'DM Sans', sans-serif;color: #393F49;">
+                <table class="w-50" style="padding: 0;">
                   <tbody>
                     <tr>
-                      <td style="font-size: 8pt;padding-right: 10px;">
-                        <div style="width: 100%;padding-bottom: 10px;font-weight: 500;">Photo 1</div>
-                        <img src="https://placehold.co/100" alt="image"
-                          style="width: 100%;max-width: 100%;vertical-align: middle;border-radius: 4px;" />
+                      <td style="padding-right: 10px;">
+                        <img src="https://placehold.co/100" alt="image" class="image" />
+                        <div class="title text-left" style="padding-top: 5px;font-size: 9pt;">Photo 1</div>
                       </td>
-                      <td style="font-size: 8pt;padding-right: 10px;">
-                        <div style="width: 100%;padding-bottom: 10px;font-weight: 500;border-radius: 4px;">Photo 2</div>
-                        <img src="https://placehold.co/100" alt="image"
-                          style="width: 100%;max-width: 100%;vertical-align: middle;" />
+                      <td style="padding-right: 10px;">
+                        <img src="https://placehold.co/100" alt="image" class="image" />
+                        <div class="title text-left" style="padding-top: 5px;font-size: 9pt;">Photo 2</div>
                       </td>
-                      <td style="font-size: 8pt;padding-right: 10px;">
-                        <div style="width: 100%;padding-bottom: 10px;font-weight: 500;">Photo 3</div>
-                        <img src="https://placehold.co/100" alt="image"
-                          style="width: 100%;max-width: 100%;vertical-align: middle;border-radius: 4px;" />
+                      <td style="padding-right: 10px;">
+                        <img src="https://placehold.co/100" alt="image" class="image" />
+                        <div class="title text-left" style="padding-top: 5px;font-size: 9pt;">Photo 3</div>
                       </td>
                     </tr>
                   </tbody>
@@ -343,21 +391,21 @@
       </tr>
       <!-- Slider -->
       <tr>
-        <table class="w-full" style="padding: 0 15px 0 30px;font-family: 'DM Sans', sans-serif;color: #393F49;">
+        <table style="padding: 0 15px 0 30px;">
           <tbody cellspacing="0">
             <tr>
-              <td class="nested-color-td" style="padding: 10px 15px;font-size: 10pt;border-radius: 5px;">
-                <div style="display: inline-block;width: 54%;font-weight: bold;">Slider</div>
-                <div style="display: inline-block;width: 45%;text-align:right;">
+              <td class="nested-color-td">
+                <div class="title text-left" style="display: inline-block;width: 54%;">Slider</div>
+                <div class="text text-right" style="display: inline-block;width: 45%;">
                   0/5 (5%)
                 </div>
               </td>
             </tr>
             <tr>
-              <td style="padding: 10px 15px;">
-                <div style="display: inline-block;width: 54%;font-weight: bold;font-size: 9pt;">Slider
+              <td class="normal-color-td">
+                <div class="title text-left" style="display: inline-block;width: 54%;">Slider
                 </div>
-                <div style="display: inline-block;width: 45%;text-align:right;font-size: 9pt;">(5) from 1 to 10</div>
+                <div class="text text-right" style="display: inline-block;width: 45%;">(5) from 1 to 10</div>
               </td>
             </tr>
           </tbody>
@@ -365,23 +413,24 @@
       </tr>
       <!-- Annotation -->
       <tr>
-        <table class="w-full" style="padding: 0 15px 0 30px;font-family: 'DM Sans', sans-serif;color: #393F49;">
+        <table style="padding: 0 15px 0 30px;">
           <tbody cellspacing="0">
             <tr>
-              <td class="nested-color-td" style="padding: 10px 15px;font-size: 10pt;border-radius: 5px;">
-                <div style="display: inline-block;width: 54%;font-weight: bold;">Annotation</div>
-                <div style="display: inline-block;width: 45%;text-align:right;">
+              <td class="nested-color-td">
+                <div class="title text-left" style="display: inline-block;width: 54%;">Annotation
+                </div>
+                <div class="text text-right" style="display: inline-block;width: 45%;">
                   0/5 (5%)
                 </div>
               </td>
             </tr>
             <tr>
-              <td style="padding: 10px 15px;">
-                <div style="font-weight: bold;font-size: 9pt;padding-bottom: 5px;">Power Tools are undamaged and being
+              <td class="normal-color-td">
+                <div class="title text-left" style="padding-bottom: 10px;">Power Tools
+                  are undamaged and being
                   used fit for purpose
                 </div>
-                <img src="https://placehold.co/200x100" alt="image"
-                  style="width: 100%;max-width: 220px;vertical-align: middle;border-radius: 4px;" />
+                <img src="https://placehold.co/200x100" alt="image" class="image" />
               </td>
             </tr>
           </tbody>
@@ -389,41 +438,39 @@
       </tr>
       <!-- Signature -->
       <tr class="break-after">
-        <table class="w-full break-after"
-          style="padding: 0 15px 0 30px;font-family: 'DM Sans', sans-serif;color: #393F49;">
+        <table class="break-after" style="padding: 0 15px 0 30px;">
           <tbody cellspacing="0">
             <tr>
-              <td class="nested-color-td" style="padding: 10px 15px;font-size: 10pt;border-radius: 5px;">
-                <div style="display: inline-block;width: 54%;font-weight: bold;">Signature</div>
-                <div style="display: inline-block;width: 45%;text-align:right;">
+              <td class="nested-color-td">
+                <div class="title text-left" style="display: inline-block;width: 54%;">Signature</div>
+                <div class="text text-right" style="display: inline-block;width: 45%;">
                   0/5 (5%)
                 </div>
               </td>
             </tr>
             <tr>
-              <td style="padding: 10px 15px;border-bottom: 1px solid rgba(0,0,0,0.125);">
-                <div style="display: inline-block;width: 54%;font-weight: bold;font-size: 9pt; vertical-align: middle;">
-                  Name & Signature of Site Supervisor / Foreman
+              <td class="normal-color-td" style="border-bottom: 1px solid rgba(0,0,0,0.125);">
+                <div class="title text-left" style="display: inline-block;width: 54%;vertical-align: middle;">
+                  Name & Signature of Inspector
                 </div>
-                <div style="display: inline-block;width: 45%;text-align:right;font-size: 9pt;vertical-align: middle;">
-                  <img src="https://placehold.co/180x90" alt="image"
-                    style="width: 100%;max-width: 180px;vertical-align: middle;border-radius: 4px;margin-bottom: 10px;" />
-                  <div style="padding-bottom: 5px;">Smith Lake</div>
-                  <div style="font-size: 8pt;">2 July 2024 8:54 UTC</div>
+                <div class="text-right"
+                  style="display: inline-block;width: 45%;text-align:right;font-size: 9pt;vertical-align: middle;">
+                  <img src="https://placehold.co/180x90" alt="image" style="max-width: 180px;" class="image" />
+                  <div style="padding: 10px 0 5px 0;">Smith Lake</div>
+                  <div>2 July 2024 8:54 UTC</div>
                 </div>
               </td>
             </tr>
             <tr>
-              <td style="padding: 10px 15px;">
-                <div style="display: inline-block;width: 54%;font-weight: bold;font-size: 9pt; vertical-align: middle;">
-                  Name & Signature of
-                  Inspector
+              <td class="normal-color-td">
+                <div class="title text-left" style="display: inline-block;width: 54%;vertical-align: middle;">
+                  Name & Signature of Site Supervisor / Foreman
                 </div>
-                <div style="display: inline-block;width: 45%;text-align:right;font-size: 9pt;vertical-align: middle;">
-                  <img src="https://placehold.co/180x90" alt="image"
-                    style="width: 100%;max-width: 180px;vertical-align: middle;border-radius: 4px;margin-bottom: 10px;" />
-                  <div style="padding-bottom: 5px;">Smith Lake</div>
-                  <div style="font-size: 8pt;">2 July 2024 8:54 UTC</div>
+                <div class="text-right"
+                  style="display: inline-block;width: 45%;text-align:right;font-size: 9pt;vertical-align: middle;">
+                  <img src="https://placehold.co/180x90" alt="image" style="max-width: 180px;" class="image" />
+                  <div style="padding: 10px 0 5px 0;">Smith Lake</div>
+                  <div>2 July 2024 8:54 UTC</div>
                 </div>
               </td>
             </tr>
@@ -432,21 +479,23 @@
       </tr>
       <!-- Location -->
       <tr>
-        <table class="w-full" style="padding: 0 15px 0 30px;font-family: 'DM Sans', sans-serif;color: #393F49;">
+        <table style="padding: 0 15px 0 30px;">
           <tbody cellspacing="0">
             <tr>
-              <td class="nested-color-td" style="padding: 10px 15px;font-size: 10pt;border-radius: 5px;">
-                <div style="display: inline-block;width: 54%;font-weight: bold;">Location</div>
-                <div style="display: inline-block;width: 45%;text-align:right;">
+              <td class="nested-color-td">
+                <div class="title text-left" style="display: inline-block;width: 54%;">Location</div>
+                <div class="text text-right" style="display: inline-block;width: 45%;">
                   0/5 (5%)
                 </div>
               </td>
             </tr>
             <tr>
-              <td style="padding: 10px 15px;">
-                <div style="display: inline-block;width: 54%;font-weight: bold;font-size: 9pt;">Location
+              <td class="normal-color-td">
+                <div class="title text-left" style="display: inline-block;width: 54%;">
+                  Location
                 </div>
-                <div style="display: inline-block;width: 45%;text-align:right;font-size: 9pt;">221 Auburn Rd, Auburn NSW
+                <div class="text text-right" style="display: inline-block;width: 45%;">
+                  221 Auburn Rd, Auburn NSW
                   2144, Australia</div>
               </td>
             </tr>
@@ -455,20 +504,23 @@
       </tr>
       <!-- Instruction -->
       <tr>
-        <table class="w-full" style="padding: 0 15px 0 30px;font-family: 'DM Sans', sans-serif;color: #393F49;">
+        <table style="padding: 0 15px 0 30px;">
           <tbody cellspacing="0">
             <tr>
-              <td class="nested-color-td" style="padding: 10px 15px;font-size: 10pt;border-radius: 5px;">
-                <div style="display: inline-block;width: 54%;font-weight: bold;">Instruction</div>
-                <div style="display: inline-block;width: 45%;text-align:right;">
+              <td class="nested-color-td">
+                <div class="title text-left" style="display: inline-block;width: 54%;font-weight: bold;">Instruction
+                </div>
+                <div class="text text-right" style="display: inline-block;width: 45%;text-align:right;">
                   0/5 (5%)
                 </div>
               </td>
             </tr>
             <tr>
-              <td style="padding: 10px 15px;">
-                <div style="font-weight: bold;font-size: 9pt;padding-bottom: 4px;">Instruction</div>
-                <div style="font-size: 9pt;">Use this audit to assess the following aspects of this site as Safe, At
+              <td class="normal-color-td">
+                <div class="title text-left" style="padding-bottom: 10px;">Instruction
+                </div>
+                <div class="text text-left">Use this audit to assess the following aspects of
+                  this site as Safe, At
                   Risk or Not Applicable. Unsafe response indicate that attention is required to bring items to a
                   satisfactory standard. Notes and photos should be attached where appropriate, particularly to At Risk
                   items.

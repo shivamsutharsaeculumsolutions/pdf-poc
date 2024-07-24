@@ -11,8 +11,11 @@
       box-sizing: border-box;
     }
 
-    .w-full {
+    table {
+      font-size: 9pt;
+      font-family: 'DM Sans', sans-serif;
       width: 100%;
+      color: #393F49;
     }
 
     .w-50 {
@@ -27,6 +30,9 @@
       color: #009AD7;
       print-color-adjust: exact;
       -webkit-print-color-adjust: exact;
+      border-radius: 5px;
+      padding: 10px 15px;
+      font-size: 10pt;
     }
 
     .nested-color-td {
@@ -35,6 +41,15 @@
       color: #393F49;
       print-color-adjust: exact;
       -webkit-print-color-adjust: exact;
+      border-radius: 5px;
+      padding: 10px 15px;
+      font-size: 9pt;
+    }
+
+    .normal-color-td {
+      color: #393F49;
+      font-size: 9pt;
+      padding: 10px 15px;
     }
 
     .green-label {
@@ -44,7 +59,8 @@
       -webkit-print-color-adjust: exact;
       padding: 3px 8px;
       width: fit-content;
-      border-radius: 2px;
+      border-radius: 5px;
+      font-size: 9pt;
     }
 
     .orange-label {
@@ -54,7 +70,8 @@
       -webkit-print-color-adjust: exact;
       padding: 3px 8px;
       width: fit-content;
-      border-radius: 2px;
+      border-radius: 5px;
+      font-size: 9pt;
     }
 
     .yellow-label {
@@ -64,27 +81,50 @@
       -webkit-print-color-adjust: exact;
       padding: 3px 8px;
       width: fit-content;
-      border-radius: 2px;
+      border-radius: 5px;
+      font-size: 9pt;
+    }
+
+    .title {
+      font-weight: bold;
+    }
+
+    .text {
+      font-weight: normal;
+    }
+
+    .text-left {
+      text-align: left;
+    }
+
+    .text-right {
+      text-align: right;
+    }
+
+    .image {
+      width: 100%;
+      max-width: 100%;
+      vertical-align: middle;
     }
   </style>
 </head>
 
 <body>
-  <table class="w-full" style="padding: 10px 15px;font-family: 'DM Sans', sans-serif;color: #393F49;">
+  <table style="padding: 10px 15px;">
     <tbody cellspacing="0">
       <tr>
         <td class="title-colored-td" style="padding: 10px 15px;font-size: 10pt;border-radius: 5px;">
-          <div style="display: inline-block;width: 54%;font-weight: bold;">Inpection</div>
-          <div style="display: inline-block;width: 45%;text-align:right;">12/15 (92.33%)</div>
+          <div class="title text-left" style="display: inline-block;width: 54%;font-weight: bold;">Inpection</div>
+          <div class="text text-right" style="display: inline-block;width: 45%;text-align:right;">12/15 (92.33%)</div>
         </td>
       </tr>
       <tr>
-        <table class="w-full" style="padding: 0 15px 0 30px;font-family: 'DM Sans', sans-serif;color: #393F49;">
+        <table style="padding: 0 15px 0 30px;">
           <tbody cellspacing="0">
             <tr>
-              <td class="nested-color-td" style="padding: 10px 15px;font-size: 10pt;border-radius: 5px;">
-                <div style="display: inline-block;width: 54%;font-weight: bold;">REVERSE VENDING MACHINE</div>
-                <div style="display: inline-block;width: 45%;text-align:right;">
+              <td class="nested-color-td">
+                <div class="title text-left" style="display: inline-block;width: 54%;">REVERSE VENDING MACHINE</div>
+                <div class="text text-right" style="display: inline-block;width: 45%;">
                   12/15 (92.33%)
                 </div>
               </td>
@@ -93,31 +133,31 @@
         </table>
       </tr>
       <tr>
-        <table class="w-full" style="padding: 0 15px 0 30px;font-family: 'DM Sans', sans-serif;color: #393F49;">
+        <table style="padding: 0 15px 0 30px;">
           <tbody cellspacing="0">
             <tr>
-              <td style="padding: 10px 15px 10px 10px;border-bottom: 1px solid rgba(0,0,0,0.125);">
-                <div style="font-size: 9pt;font-weight: 500;padding: 0 0 10px 5px;">1. Lorem ipsum, dolor sit amet
+              <td style="padding: 10px 15px 10px 10px;font-size: 9pt;border-bottom: 1px solid rgba(0,0,0,0.125);">
+                <div class="title text-left" style="padding: 0 0 10px 5px;">1. Lorem ipsum, dolor sit amet
                   consectetur adipisicing elit. Quidem blanditiis aperiam quas earum beatae aliquam.</div>
-                <div class="green-label" style="font-size: 9pt;font-weight: 500;margin: 0 0 10px 5px;">Requires
+                <div class="green-label" style="margin: 0 0 10px 5px;">Requires
                   attention</div>
-                <table class="w-50" style="padding: 0;font-family: 'DM Sans', sans-serif;color: #393F49;">
+                <table class="w-50" style="padding: 0;">
                   <tbody>
                     <tr>
-                      <td style="padding: 0 5px;font-size: 8pt;">
-                        <div style="width: 100%;padding-bottom: 10px;font-weight: 500;">Photo 1</div>
-                        <img src="https://placehold.co/100" alt="image"
-                          style="width: 100%;max-width: 100%;vertical-align: middle;border-radius: 4px;" />
+                      <td style="padding: 0 5px;">
+                        <div class="title text-left" style="padding-bottom: 5px;font-size: 9pt;">
+                          Photo 1</div>
+                        <img src="https://placehold.co/100" alt="image" class="image" />
                       </td>
-                      <td style="padding: 0 5px;font-size: 8pt;">
-                        <div style="width: 100%;padding-bottom: 10px;font-weight: 500;border-radius: 4px;">Photo 2</div>
-                        <img src="https://placehold.co/100" alt="image"
-                          style="width: 100%;max-width: 100%;vertical-align: middle;" />
+                      <td style="padding: 0 5px;">
+                        <div class="title text-left" style="padding-bottom: 5px;font-size: 9pt;">
+                          Photo 2</div>
+                        <img src="https://placehold.co/100" alt="image" class="image" />
                       </td>
-                      <td style="padding: 0 5px;font-size: 8pt;">
-                        <div style="width: 100%;padding-bottom: 10px;font-weight: 500;">Photo 3</div>
-                        <img src="https://placehold.co/100" alt="image"
-                          style="width: 100%;max-width: 100%;vertical-align: middle;border-radius: 4px;" />
+                      <td style="padding: 0 5px;">
+                        <div class="title text-left" style="padding-bottom: 5px;font-size: 9pt;">
+                          Photo 3</div>
+                        <img src="https://placehold.co/100" alt="image" class="image" />
                       </td>
                     </tr>
                   </tbody>
@@ -125,57 +165,56 @@
               </td>
             </tr>
             <tr>
-              <td style="padding: 10px 15px 10px 10px;border-bottom: 1px solid rgba(0,0,0,0.125);">
-                <div style="font-size: 9pt;font-weight: 500;padding: 0 0 10px 5px;">2. Lorem ipsum, dolor sit amet
+              <td style="padding: 10px 15px 10px 10px;font-size: 9pt;border-bottom: 1px solid rgba(0,0,0,0.125);">
+                <div class="title text-left" style="padding: 0 0 10px 5px;">2. Lorem ipsum, dolor sit amet
                   consectetur adipisicing elit. Quidem blanditiis aperiam quas earum beatae aliquam.</div>
-                <div class="orange-label" style="font-size: 9pt;font-weight: 500;margin: 0 0 10px 5px;">Exceeds
-                  standards</div>
-                <table class="w-50" style="padding: 0;font-family: 'DM Sans', sans-serif;color: #393F49;">
-                  <tbody>
-                    <tr>
-                      <td style="padding: 0 5px;font-size: 8pt;">
-                        <div style="width: 100%;padding-bottom: 10px;font-weight: 500;">Photo 1</div>
-                        <img src="https://placehold.co/100" alt="image"
-                          style="width: 100%;max-width: 100%;vertical-align: middle;border-radius: 4px;" />
-                      </td>
-                      <td style="padding: 0 5px;font-size: 8pt;">
-                        <div style="width: 100%;padding-bottom: 10px;font-weight: 500;">Photo 2</div>
-                        <img src="https://placehold.co/100" alt="image"
-                          style="width: 100%;max-width: 100%;vertical-align: middle;border-radius: 4px;" />
-                      </td>
-                      <td style="padding: 0 5px;font-size: 8pt;">
-                        <div style="width: 100%;padding-bottom: 10px;font-weight: 500;">Photo 3</div>
-                        <img src="https://placehold.co/100" alt="image"
-                          style="width: 100%;max-width: 100%;vertical-align: middle;border-radius: 4px;" />
-                      </td>
-                    </tr>
-                  </tbody>
-                </table>
-              </td>
-            </tr>
-            <tr>
-              <td style="padding: 10px 15px 10px 10px;">
-                <div style="font-size: 9pt;font-weight: 500;padding: 0 0 10px 5px;">3. Lorem ipsum, dolor sit amet
-                  consectetur adipisicing elit. Quidem blanditiis aperiam quas earum beatae aliquam.</div>
-                <div class="yellow-label" style="font-size: 9pt;font-weight: 500;margin: 0 0 10px 5px;">Meets standards
+                <div class="orange-label" style="margin: 0 0 10px 5px;">Exceeds standards
                 </div>
-                <table class="w-50" style="padding: 0;font-family: 'DM Sans', sans-serif;color: #393F49;">
+                <table class="w-50" style="padding: 0;">
                   <tbody>
                     <tr>
-                      <td style="padding: 0 5px;font-size: 8pt;">
-                        <div style="width: 100%;padding-bottom: 10px;font-weight: 500;">Photo 1</div>
-                        <img src="https://placehold.co/100" alt="image"
-                          style="width: 100%;max-width: 100%;vertical-align: middle;border-radius: 4px;" />
+                      <td style="padding: 0 5px;">
+                        <div class="title text-left" style="padding-bottom: 5px;font-size: 9pt;">
+                          Photo 1</div>
+                        <img src="https://placehold.co/100" alt="image" class="image" />
                       </td>
-                      <td style="padding: 0 5px;font-size: 8pt;">
-                        <div style="width: 100%;padding-bottom: 10px;font-weight: 500;">Photo 2</div>
-                        <img src="https://placehold.co/100" alt="image"
-                          style="width: 100%;max-width: 100%;vertical-align: middle;border-radius: 4px;" />
+                      <td style="padding: 0 5px;">
+                        <div class="title text-left" style="padding-bottom: 5px;font-size: 9pt;">
+                          Photo 2</div>
+                        <img src="https://placehold.co/100" alt="image" class="image" />
                       </td>
-                      <td style="padding: 0 5px;font-size: 8pt;">
-                        <div style="width: 100%;padding-bottom: 10px;font-weight: 500;">Photo 3</div>
-                        <img src="https://placehold.co/100" alt="image"
-                          style="width: 100%;max-width: 100%;vertical-align: middle;border-radius: 4px;" />
+                      <td style="padding: 0 5px;">
+                        <div class="title text-left" style="padding-bottom: 5px;font-size: 9pt;">
+                          Photo 3</div>
+                        <img src="https://placehold.co/100" alt="image" class="image" />
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </td>
+            </tr>
+            <tr>
+              <td style="padding: 10px 15px 10px 10px;font-size: 9pt;">
+                <div class="title text-left" style="padding: 0 0 10px 5px;">3. Lorem ipsum, dolor sit amet
+                  consectetur adipisicing elit. Quidem blanditiis aperiam quas earum beatae aliquam.</div>
+                <div class="yellow-label" style="margin: 0 0 10px 5px;">Meets standards</div>
+                <table class="w-50" style="padding: 0;">
+                  <tbody>
+                    <tr>
+                      <td style="padding: 0 5px;">
+                        <div class="title text-left" style="padding-bottom: 5px;font-size: 9pt;">
+                          Photo 1</div>
+                        <img src="https://placehold.co/100" alt="image" class="image" />
+                      </td>
+                      <td style="padding: 0 5px;">
+                        <div class="title text-left" style="padding-bottom: 5px;font-size: 9pt;">
+                          Photo 2</div>
+                        <img src="https://placehold.co/100" alt="image" class="image" />
+                      </td>
+                      <td style="padding: 0 5px;">
+                        <div class="title text-left" style="padding-bottom: 5px;font-size: 9pt;">
+                          Photo 3</div>
+                        <img src="https://placehold.co/100" alt="image" class="image" />
                       </td>
                     </tr>
                   </tbody>

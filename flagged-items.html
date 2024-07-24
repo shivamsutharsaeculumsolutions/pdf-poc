@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <title>Flagged Items</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    table {
+      font-family: 'DM Sans', sans-serif;
+      color: #393F49;
+      width: 100%;
+      font-size: 9pt;
+    }
+
+    .title-colored-td {
+      border: 1pt solid #009AD7;
+      background-color: rgba(50, 114, 145, 0.1);
+      color: #009AD7;
+      print-color-adjust: exact;
+      -webkit-print-color-adjust: exact;
+      border-radius: 5px;
+      padding: 10px 15px;
+      font-size: 10pt;
+    }
+
+    .nested-color-td {
+      border: 1pt solid #D3D9E5;
+      background-color: #F5F7FA;
+      color: #393F49;
+      print-color-adjust: exact;
+      -webkit-print-color-adjust: exact;
+      border-radius: 5px;
+      padding: 10px 15px;
+      font-size: 9pt;
+    }
+
+    .normal-color-td {
+      color: #393F49;
+      padding: 10px 15px;
+      font-size: 9pt;
+    }
+
+    .yes-label {
+      background-color: #4DD964;
+      color: #fff;
+      print-color-adjust: exact;
+      -webkit-print-color-adjust: exact;
+      padding: 3px 8px;
+      margin-left: auto;
+      width: fit-content;
+      border-radius: 5px;
+      font-weight: bold;
+      font-size: 9pt;
+    }
+
+    .no-label {
+      background-color: #F8285A;
+      color: #fff;
+      print-color-adjust: exact;
+      -webkit-print-color-adjust: exact;
+      padding: 3px 8px;
+      margin-left: auto;
+      width: fit-content;
+      border-radius: 5px;
+      font-weight: bold;
+      font-size: 9pt;
+    }
+
+    .border-collapse {
+      border-collapse: collapse;
+    }
+
+    .td-space {
+      padding: 4px;
+    }
+
+    .title {
+      font-weight: bold;
+    }
+
+    .text {
+      font-weight: normal;
+    }
+
+    .text-left {
+      text-align: left;
+    }
+
+    .text-right {
+      text-align: right;
+    }
+  </style>
+</head>
+
+<body>
+  <table style="padding: 10px 15px 0 15px;">
+    <tbody cellspacing="0">
+      <tr>
+        <td class="title-colored-td">
+          <div class="title text-left" style="display: inline-block;width: 54%;font-weight: bold;">Flagged Items</div>
+          <div class="text text-right" style="display: inline-block;width: 45%;text-align:right;">1 flagged, 2 tasks
+          </div>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+  <table style="padding: 0 15px 10px 15px;">
+    <tbody cellspacing="0">
+      <tr>
+        <table style="padding: 0 15px 0 30px;">
+          <tbody cellspacing="0">
+            <tr>
+              <td class="nested-color-td">
+                <div class="title text-left" style="display: inline-block;width: 54%;">Flagged Items
+                </div>
+                <div class="text text-right" style="display: inline-block;width: 45%;">
+                  1 flagged, 1 task
+                </div>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </tr>
+      <tr>
+        <table style="padding: 0 15px 0 30px;">
+          <tbody cellspacing="0">
+            <tr>
+              <td class="normal-color-td" style="border-bottom: 1px solid rgba(0,0,0,0.125);">
+                <div class="title text-left" style="padding-bottom: 5px;">Name</div>
+                <div class="text text-left">ABC Services
+                </div>
+              </td>
+            </tr>
+            <tr>
+              <td class="normal-color-td" style="border-bottom: 1px solid rgba(0,0,0,0.125);">
+                <div class="title text-left" style="padding-bottom: 5px;">Description
+                </div>
+                <div class="text text-left">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Sit saepe,
+                  voluptate culpa fugit illum perferendis exercitationem dolorum harum. Consectetur, est.
+                </div>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </tr>
+      <tr>
+        <table style="padding: 0 15px 0 30px;">
+          <tbody cellspacing="0">
+            <tr>
+              <td class="normal-color-td">
+                <div class="title text-left" style="display: inline-block;width: 54%;vertical-align: middle;">All
+                  non-critical
+                  & critical
+                  violations corrected and maintained</div>
+                <div class="text text-right"
+                  style="display: inline-block;width: 45%;text-align:right;vertical-align: middle;">
+                  <div class="yes-label">
+                    Yes
+                  </div>
+                </div>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </tr>
+      <tr>
+        <td>
+          <table style="padding: 0 15px 0 30px;">
+            <tbody cellspacing="0">
+              <tr>
+                <td>
+                  <table class="border-collapse nested-color-td">
+                    <tbody>
+                      <tr>
+                        <td class="title-colored-td"
+                          style="width: 188pt;font-size: 9pt;font-weight: bold;padding: 10px;">
+                          Assignee
+                        </td>
+                        <td class="title-colored-td"
+                          style="width: 188pt;font-size: 9pt;font-weight: bold;padding: 10px;">
+                          Status
+                        </td>
+                        <td class="title-colored-td"
+                          style="width: 188pt;font-size: 9pt;font-weight: bold;padding: 10px;">
+                          Priority
+                        </td>
+                        <td class="title-colored-td"
+                          style="width: 188pt;font-size: 9pt;font-weight: bold;padding: 10px;">
+                          Deadline
+                        </td>
+                        <td class="title-colored-td"
+                          style="width: 188pt;font-size: 9pt;font-weight: bold;padding: 10px;">
+                          Created By
+                        </td>
+                      </tr>
+                      <tr>
+                        <td
+                          style="width: 188pt;font-size: 9pt;padding: 10px;border-right: 1pt solid rgba(0,0,0,0.125);">
+                          Smith Lake
+                        </td>
+                        <td
+                          style="width: 188pt;font-size: 9pt;padding: 10px;color: #FF8A00;border-right: 1pt solid rgba(0,0,0,0.125);">
+                          To do
+                        </td>
+                        <td
+                          style="width: 188pt;font-size: 9pt;padding: 10px;color: #F8285A;border-right: 1pt solid rgba(0,0,0,0.125);">
+                          High
+                        </td>
+                        <td
+                          style="width: 188pt;font-size: 9pt;padding: 10px;border-right: 1pt solid rgba(0,0,0,0.125);">
+                          9 July 2024
+                          005:57 UTC
+                        </td>
+                        <td style="width: 188pt;font-size: 9pt;padding: 10px;">
+                          Jenson Cooper
+                        </td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+  <table style="padding: 0 15px 10px 15px;">
+    <tbody cellspacing="0">
+      <tr>
+        <table style="padding: 0 15px 0 30px;">
+          <tbody cellspacing="0">
+            <tr>
+              <td class="nested-color-td">
+                <div class="title text-left" style="display: inline-block;width: 54%;">Other Tasks
+                </div>
+                <div class="text text-right" style="display: inline-block;width: 45%;">
+                  1 flagged, 1 task
+                </div>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </tr>
+      <tr>
+        <table style="padding: 0 15px 0 30px;">
+          <tbody cellspacing="0">
+            <tr>
+              <td class="normal-color-td" style="border-bottom: 1px solid rgba(0,0,0,0.125);">
+                <div class="title text-left" style="padding-bottom: 5px;">Name</div>
+                <div class="text text-left">ABC Services
+                </div>
+              </td>
+            </tr>
+            <tr>
+              <td class="normal-color-td" style="border-bottom: 1px solid rgba(0,0,0,0.125);">
+                <div class="title text-left" style="padding-bottom: 5px;">Description
+                </div>
+                <div class="text text-left">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Sit saepe,
+                  voluptate culpa fugit illum perferendis exercitationem dolorum harum. Consectetur, est.
+                </div>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </tr>
+      <tr>
+        <table style="padding: 0 15px 0 30px;">
+          <tbody cellspacing="0">
+            <tr>
+              <td class="normal-color-td">
+                <div class="title text-left" style="display: inline-block;width: 54%;vertical-align: middle;">Most
+                  current health inspection report available</div>
+                <div class="text text-right"
+                  style="display: inline-block;width: 45%;text-align:right;vertical-align: middle;">
+                  <div class="no-label">
+                    No
+                  </div>
+                </div>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </tr>
+      <tr>
+        <td>
+          <table style="padding: 0 15px 0 30px;">
+            <tbody cellspacing="0">
+              <tr>
+                <td>
+                  <table class="border-collapse nested-color-td">
+                    <tbody>
+                      <tr>
+                        <td class="title-colored-td"
+                          style="width: 188pt;font-size: 9pt;font-weight: bold;padding: 10px;">
+                          Assignee
+                        </td>
+                        <td class="title-colored-td"
+                          style="width: 188pt;font-size: 9pt;font-weight: bold;padding: 10px;">
+                          Status
+                        </td>
+                        <td class="title-colored-td"
+                          style="width: 188pt;font-size: 9pt;font-weight: bold;padding: 10px;">
+                          Priority
+                        </td>
+                        <td class="title-colored-td"
+                          style="width: 188pt;font-size: 9pt;font-weight: bold;padding: 10px;">
+                          Deadline
+                        </td>
+                        <td class="title-colored-td"
+                          style="width: 188pt;font-size: 9pt;font-weight: bold;padding: 10px;">
+                          Created By
+                        </td>
+                      </tr>
+                      <tr>
+                        <td
+                          style="width: 188pt;font-size: 9pt;padding: 10px;border-right: 1pt solid rgba(0,0,0,0.125);">
+                          Smith Lake
+                        </td>
+                        <td
+                          style="width: 188pt;font-size: 9pt;padding: 10px;color: #FF8A00;border-right: 1pt solid rgba(0,0,0,0.125);">
+                          To do
+                        </td>
+                        <td
+                          style="width: 188pt;font-size: 9pt;padding: 10px;color: #F8285A;border-right: 1pt solid rgba(0,0,0,0.125);">
+                          High
+                        </td>
+                        <td
+                          style="width: 188pt;font-size: 9pt;padding: 10px;border-right: 1pt solid rgba(0,0,0,0.125);">
+                          9 July 2024
+                          005:57 UTC
+                        </td>
+                        <td style="width: 188pt;font-size: 9pt;padding: 10px;">
+                          Jenson Cooper
+                        </td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</body>
+
+</html>
